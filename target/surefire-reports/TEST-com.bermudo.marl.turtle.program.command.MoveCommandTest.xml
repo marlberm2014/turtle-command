@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.bermudo.marl.turtle.program.command.MoveCommandTest" time="0.019" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.bermudo.marl.turtle.program.command.MoveCommandTest" time="0.016" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="PH"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\bermudo\AppData\Local\Temp\surefire8936990505337045132\surefirebooter246137995052756022.jar C:\Users\bermudo\AppData\Local\Temp\surefire8936990505337045132 2018-04-20T04-00-17_149-jvmRun1 surefire3705057818874371059tmp surefire_07880622895006700616tmp"/>
+    <property name="sun.java.command" value="C:\Users\bermudo\AppData\Local\Temp\surefire2074191220409924881\surefirebooter8069113942447552043.jar C:\Users\bermudo\AppData\Local\Temp\surefire2074191220409924881 2018-04-20T04-20-12_273-jvmRun1 surefire1345839419419188491tmp surefire_03516468325055719234tmp"/>
     <property name="surefire.test.class.path" value="D:\TOOLS_GTAv3\turtle-program\target\test-classes;D:\TOOLS_GTAv3\turtle-program\target\classes;C:\Users\bermudo\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\bermudo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\bermudo\.m2\repository\org\mockito\mockito-all\1.9.5\mockito-all-1.9.5.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\bermudo"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\bermudo\AppData\Local\Temp\surefire8936990505337045132\surefirebooter246137995052756022.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\bermudo\AppData\Local\Temp\surefire2074191220409924881\surefirebooter8069113942447552043.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,6 +61,6 @@
     <property name="java.class.version" value="52.0"/>
   </properties>
   <testcase name="testExecuteWhenTurtleIsOutofBounds" classname="com.bermudo.marl.turtle.program.command.MoveCommandTest" time="0"/>
-  <testcase name="testExecute" classname="com.bermudo.marl.turtle.program.command.MoveCommandTest" time="0.017"/>
-  <testcase name="testExecuteWhenTurtleIsNotPlaced" classname="com.bermudo.marl.turtle.program.command.MoveCommandTest" time="0.001"/>
+  <testcase name="testExecute" classname="com.bermudo.marl.turtle.program.command.MoveCommandTest" time="0.015"/>
+  <testcase name="testExecuteWhenTurtleIsNotPlaced" classname="com.bermudo.marl.turtle.program.command.MoveCommandTest" time="0"/>
 </testsuite>

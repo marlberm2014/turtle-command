@@ -6,8 +6,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.bermudo.marl</groupId>
-	<artifactId>turtle-command</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<artifactId>turtle-program</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
 
 	<name>turtle-command</name>
 	<!-- FIXME change it to the project's website -->
