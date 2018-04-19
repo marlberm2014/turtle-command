@@ -9,7 +9,6 @@ import static org.junit.Assert.*;
 
 import static org.mockito.Mockito.*;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import com.bermudo.marl.turtle.program.data.Turtle;
@@ -19,21 +18,8 @@ import com.bermudo.marl.turtle.program.data.Turtle;
  *
  * @author <a HREF="mailto:marl.aldwin.bermudo@gmail.com">Bermudo, Marl</a>
  */
-public class PlaceCommandTest
+public class PlaceCommandTest extends CommandTest
 {
-
-    private static final int MAXIMUM_DIMENSION = 5;
-
-    private Turtle turtle;
-
-    /**
-     * @throws java.lang.Exception
-     */
-    @Before
-    public void setUp() throws Exception
-    {
-        turtle = spy( new Turtle( MAXIMUM_DIMENSION ) );
-    }
 
     /**
      * Test method for {@link com.bermudo.marl.turtle.program.command.PlaceCommand#execute()}.
@@ -42,7 +28,7 @@ public class PlaceCommandTest
     public void testExecute()
     {
         String expected = "3,3,EAST";
-        PlaceCommand command = new PlaceCommand( turtle, expected );
+        Command command = new PlaceCommand( turtle, expected );
         command.execute();
         verify( turtle ).setPlace( 3, 3, Turtle.Direction.EAST );
         assertEquals( expected, turtle.toString() );
@@ -54,7 +40,7 @@ public class PlaceCommandTest
     @Test( expected = IllegalArgumentException.class )
     public void testExecuteIncompleteArgument()
     {
-        PlaceCommand command = new PlaceCommand( turtle, "1" );
+        Command command = new PlaceCommand( turtle, "1" );
         command.execute();
     }
 
@@ -64,7 +50,7 @@ public class PlaceCommandTest
     @Test( expected = NumberFormatException.class )
     public void testExecuteInvalidCoordinates()
     {
-        PlaceCommand command = new PlaceCommand( turtle, "a,b,c" );
+        Command command = new PlaceCommand( turtle, "a,b,c" );
         command.execute();
     }
 
@@ -74,7 +60,7 @@ public class PlaceCommandTest
     @Test( expected = IllegalArgumentException.class )
     public void testExecuteInvalidDirection()
     {
-        PlaceCommand command = new PlaceCommand( turtle, "1,1,c" );
+        Command command = new PlaceCommand( turtle, "1,1,c" );
         command.execute();
     }
 
@@ -84,7 +70,7 @@ public class PlaceCommandTest
     @Test
     public void testExecuteCoordinatesOutofBounds()
     {
-        PlaceCommand command = new PlaceCommand( turtle, "-1,-1,NORTH" );
+        Command command = new PlaceCommand( turtle, "-1,-1,NORTH" );
         command.execute();
         verify( turtle, never() ).setPlace( anyInt(), anyInt(), any( Turtle.Direction.class ) );
         command = new PlaceCommand( turtle, "6,6,NORTH" );
