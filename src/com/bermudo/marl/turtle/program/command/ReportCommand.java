@@ -32,4 +32,9 @@ public class ReportCommand implements Command
         }
     }
 
+    @Override
+    public String toString()
+    {
+        return "REPORT " + turtle.toString();
+    }
 }
