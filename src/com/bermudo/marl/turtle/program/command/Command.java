@@ -9,7 +9,7 @@ public interface Command
 {
     public enum Type
     {
-        PLACE
+        PLACE, MOVE
     }
 
     /**

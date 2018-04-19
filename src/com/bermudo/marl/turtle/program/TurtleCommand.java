@@ -1,6 +1,7 @@
 package com.bermudo.marl.turtle.program;
 
 import com.bermudo.marl.turtle.program.command.Command;
+import com.bermudo.marl.turtle.program.command.MoveCommand;
 import com.bermudo.marl.turtle.program.command.PlaceCommand;
 import com.bermudo.marl.turtle.program.data.Table;
 import com.bermudo.marl.turtle.program.data.Turtle;
@@ -53,6 +54,10 @@ public class TurtleCommand
         if( Command.Type.PLACE.toString().equals( commandStr ) )
         {
             return new PlaceCommand( turtle, splitInput[1] );
+        }
+        else if(Command.Type.MOVE.toString().equals( commandStr ))
+        {
+            return new MoveCommand(turtle);
         }
         return command;
     }
