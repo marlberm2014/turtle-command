@@ -11,7 +11,7 @@ package com.bermudo.marl.turtle.program;
  * @author <a HREF="mailto:marl.aldwin.bermudo@gmail.com">Bermudo, Marl</a>
  *
  */
-public class CLITurtleCommand extends AbstractTurtleCommand
+public class CLITurtleProgram extends AbstractTurtleProgram
 {
 
     @Override

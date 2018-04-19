@@ -14,7 +14,7 @@ import com.bermudo.marl.turtle.program.data.Turtle;
  *
  * @author <a HREF="mailto:marl.aldwin.bermudo@gmail.com">Bermudo, Marl</a>
  */
-public abstract class AbstractTurtleCommand
+public abstract class AbstractTurtleProgram
 {
 
     private Table table;
@@ -23,12 +23,12 @@ public abstract class AbstractTurtleCommand
 
     private boolean ignoreCase;
 
-    public AbstractTurtleCommand()
+    public AbstractTurtleProgram()
     {
         this( new Table() );
     }
 
-    public AbstractTurtleCommand( Table table )
+    public AbstractTurtleProgram( Table table )
     {
         this.table = table;
         this.debug = false;
@@ -54,14 +54,14 @@ public abstract class AbstractTurtleCommand
             Command command = parseStringCommand( turtle, input.split( " " ) );
             if( command == null )
             {
-                System.err.println( "Invalid command " + input + ", exiting program." );
+                System.out.println( "Invalid command '" + input + "', exiting program." );
                 return;
             }
             table.setCommand( command );
             table.doCommand();
             if( debug )
             {
-                System.out.println( turtle );
+                System.out.println( "[DEBUG]: " + turtle );
             }
         }
     }

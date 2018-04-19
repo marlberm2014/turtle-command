@@ -18,11 +18,11 @@ import com.bermudo.marl.turtle.program.command.Command;
 import com.bermudo.marl.turtle.program.data.Table;
 
 /**
- * Test cases for {@link AbstractTurtleCommand}
+ * Test cases for {@link AbstractTurtleProgram}
  *
  * @author <a HREF="mailto:marl.aldwin.bermudo@gmail.com">Bermudo, Marl</a>
  */
-public class AbstractTurtleCommandTest
+public class AbstractTurtleProgramTest
 {
 
     private StubTable table;
@@ -37,34 +37,40 @@ public class AbstractTurtleCommandTest
     }
 
     /**
-     * Test method for {@link com.bermudo.marl.turtle.program.AbstractTurtleCommand#start()}.
+     * Test method for {@link com.bermudo.marl.turtle.program.AbstractTurtleProgram#start()}.
      */
     @Test
     public void testStart()
     {
-        List<String> commandList = new ArrayList<>();
-        commandList.add( "PLACE 1,2,EAST" );
-        commandList.add( "MOVE");
-        commandList.add( "MOVE");
-        commandList.add( "LEFT");
-        commandList.add( "MOVE");
-        commandList.add( "REPORT");
+        //Expected commands
+        String place = "PLACE 1,2,EAST";
+        String move = "MOVE";
+        String left = "LEFT";
+        String report = "REPORT";
         
-        AbstractTurtleCommand turtleCommand = new StubTurtleCommand( commandList );
+        List<String> commandList = new ArrayList<>();
+        commandList.add( place );
+        commandList.add( move );
+        commandList.add( move );
+        commandList.add( left );
+        commandList.add( move );
+        commandList.add( report );
+
+        AbstractTurtleProgram turtleCommand = new StubTurtleCommand( commandList );
         turtleCommand.start();
         List<Command> actualCommand = table.getCommandList();
-        
+
         String expectedTurtleLocation = "3,3,NORTH";
-        
-        assertEquals( "Place 1,2,EAST " + expectedTurtleLocation, actualCommand.remove( 0 ).toString() );
-        assertEquals( "Move " + expectedTurtleLocation, actualCommand.remove( 0 ).toString() );
-        assertEquals( "Move " + expectedTurtleLocation, actualCommand.remove( 0 ).toString() );
-        assertEquals( "Left " + expectedTurtleLocation, actualCommand.remove( 0 ).toString() );
-        assertEquals( "Move " + expectedTurtleLocation, actualCommand.remove( 0 ).toString() );
-        assertEquals( "Report " + expectedTurtleLocation, actualCommand.remove( 0 ).toString() );
+
+        assertEquals( place + " " + expectedTurtleLocation, actualCommand.remove( 0 ).toString() );
+        assertEquals( move + " " + expectedTurtleLocation, actualCommand.remove( 0 ).toString() );
+        assertEquals( move + " " + expectedTurtleLocation, actualCommand.remove( 0 ).toString() );
+        assertEquals( left + " " + expectedTurtleLocation, actualCommand.remove( 0 ).toString() );
+        assertEquals( move + " " + expectedTurtleLocation, actualCommand.remove( 0 ).toString() );
+        assertEquals( report + " " + expectedTurtleLocation, actualCommand.remove( 0 ).toString() );
     }
-    
-    private class StubTurtleCommand extends AbstractTurtleCommand
+
+    private class StubTurtleCommand extends AbstractTurtleProgram
     {
         private List<String> commandList;
 
@@ -77,7 +83,7 @@ public class AbstractTurtleCommandTest
         @Override
         public String getNextCommand()
         {
-            if( commandList.size() == 0 )
+            if( commandList.isEmpty() )
             {
                 return "";
             }
@@ -89,13 +95,13 @@ public class AbstractTurtleCommandTest
     private class StubTable extends Table
     {
         private List<Command> commandList;
-        
+
         public StubTable()
         {
             super();
             this.commandList = new ArrayList<>();
         }
-        
+
         @Override
         public void setCommand( Command command )
         {

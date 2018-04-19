@@ -1,6 +1,7 @@
 
 package com.bermudo.marl.turtle.program;
 
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -18,12 +19,12 @@ public class StartTurtleCommand
 
     private static final String FILE = "--file";
 
-    public static void main( String[] args )
+    public static void main( String[] args ) throws IOException
     {
         boolean debug = false;
         boolean ignoreCase = false;
         System.out.println( "Starting turtle program..." );
-        AbstractTurtleCommand turtleCommand = new CLITurtleCommand();
+        AbstractTurtleProgram turtleCommand = new CLITurtleProgram();
         for( int index = 0; index < args.length; index++ )
         {
             String string = args[index];
@@ -40,7 +41,7 @@ public class StartTurtleCommand
             {
                 Path path = Paths.get( args[index + 1] );
                 System.out.println( "Executing command from file: " + path.toAbsolutePath() );
-                
+                turtleCommand = new FileReaderTurtleProgram( path );
             }
         }
 

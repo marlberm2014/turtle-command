@@ -50,6 +50,6 @@ public class PlaceCommand implements Command
     @Override
     public String toString()
     {
-        return "Place " + argument + " " + turtle.toString();
+        return "PLACE " + argument + " " + turtle.toString();
     }
 }

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.bermudo.marl.turtle.program.FileReaderTurtleCommandTest" time="0.563" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\TOOLS_GTAv3\turtle-program\target\test-classes;D:\TOOLS_GTAv3\turtle-program\target\classes;C:\Users\bermudo\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\bermudo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\bermudo\.m2\repository\org\mockito\mockito-all\1.9.5\mockito-all-1.9.5.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="user.country" value="PH"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\bermudo\AppData\Local\Temp\surefire274602283982689989\surefirebooter3142248051485570627.jar C:\Users\bermudo\AppData\Local\Temp\surefire274602283982689989 2018-04-20T03-46-38_941-jvmRun1 surefire8233451534898242038tmp surefire_06808504301994936412tmp"/>
+    <property name="surefire.test.class.path" value="D:\TOOLS_GTAv3\turtle-program\target\test-classes;D:\TOOLS_GTAv3\turtle-program\target\classes;C:\Users\bermudo\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\bermudo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\bermudo\.m2\repository\org\mockito\mockito-all\1.9.5\mockito-all-1.9.5.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\bermudo"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_131\jre"/>
+    <property name="basedir" value="D:\TOOLS_GTAv3\turtle-program"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\bermudo\AppData\Local\Temp\surefire274602283982689989\surefirebooter3142248051485570627.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_131-b11"/>
+    <property name="user.name" value="bermudo"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="6.1"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\bermudo\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\bermudo\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_131"/>
+    <property name="user.dir" value="D:\TOOLS_GTAv3\turtle-program"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;%PY_HOME%\;%PY_HOME%\Scripts;C:\Perl64\site\bin;C:\Perl64\bin;C:\ProgramData\Oracle\Java\javapath;C:\Apps\ECloud\i686_win32\bin;D:\app\oracle11\product\11.2.0\client_1\bin;C:\Program Files (x86)\Java\jre1.8.0_131\bin;C:\Program Files\Java\jdk1.8.0_102\;C:\Program Files (x86)\RSA SecurID Token Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\winzip;C:\Program Files (x86)\IXOS\bin;C:\Program Files (x86)\ESCRIBA\composer\bin\;C:\Program Files (x86)\IBM\Rational\Publishing Engine\1.1.2\lib;C:\Program Files (x86)\PuTTY\;D:\BTSSM_CODE\EventWatcher\dependency\firefox;C:\Program Files\Git\cmd;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files (x86)\SafeCom\SafeComPrintClient;C:\gradle-4.0\bin\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\nodejs\;C:\Program Files\TortoiseSVN\bin;%CI_TOOL%;C:\Program Files\TortoiseGit\bin;D:\gitflow;C:\Program Files (x86)\Sennheiser\SoftphoneSDK\;C:\Program Files (x86)\CheckPoint\Endpoint Security\Endpoint Common\bin;C:\Users\bermudo\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\bermudo\AppData\Local\Programs\Python\Python36-32\;D:\userdata\bermudo\Application Data\npm;C:\Program Files\Microsoft VS Code\bin;D:\eclipse\eclipseJD\eclipse;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.131-b11"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testStart" classname="com.bermudo.marl.turtle.program.FileReaderTurtleCommandTest" time="0.555"/>
+  <testcase name="testStartInvalidFile" classname="com.bermudo.marl.turtle.program.FileReaderTurtleCommandTest" time="0.007"/>
+</testsuite>

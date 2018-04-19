@@ -53,6 +53,6 @@ public class LeftCommand implements Command
     @Override
     public String toString()
     {
-        return "Left " + turtle.toString();
+        return "LEFT " + turtle.toString();
     }
 }
