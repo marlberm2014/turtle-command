@@ -15,15 +15,18 @@ public class TurtleCommand
 {
 
     private Table table;
+    
+    private boolean debug;
 
-    public TurtleCommand()
+    public TurtleCommand( boolean debug)
     {
-        this( new Table() );
+        this( new Table(), debug );
     }
 
-    public TurtleCommand( Table table )
+    public TurtleCommand( Table table, boolean debug )
     {
         this.table = table;
+        this.debug = debug;
     }
 
     /**
@@ -44,6 +47,10 @@ public class TurtleCommand
             }
             table.setCommand( command );
             table.doCommand();
+            if(debug)
+            {
+                System.out.println( turtle );
+            }
         }
     }
 

@@ -9,9 +9,21 @@ package com.bermudo.marl.turtle.program;
 public class StartTurtleCommand
 {
     
+    private static final String DEBUG = "--debug";
+
     public static void main( String[] args )
     {
-        TurtleCommand turtleCommand = new TurtleCommand();
+        boolean debug = false;
+        System.out.println( "Starting turtle program..." );
+        for( String string : args )
+        {
+            if(DEBUG.equals( string ))
+            {
+                System.out.println( "Debug mode activated..." );
+                debug = true;
+            }
+        }
+        TurtleCommand turtleCommand = new TurtleCommand(debug);
         turtleCommand.start();
     }
 
