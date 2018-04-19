@@ -10,11 +10,11 @@ import com.bermudo.marl.turtle.program.data.Table;
 import com.bermudo.marl.turtle.program.data.Turtle;
 
 /**
- * The class assembles the turtle command program.
+ * The abstract class for the turtle command program.
  *
  * @author <a HREF="mailto:marl.aldwin.bermudo@gmail.com">Bermudo, Marl</a>
  */
-public class TurtleCommand
+public abstract class AbstractTurtleCommand
 {
 
     private Table table;
@@ -23,12 +23,12 @@ public class TurtleCommand
 
     private boolean ignoreCase;
 
-    public TurtleCommand()
+    public AbstractTurtleCommand()
     {
         this( new Table() );
     }
 
-    public TurtleCommand( Table table )
+    public AbstractTurtleCommand( Table table )
     {
         this.table = table;
         this.debug = false;
@@ -54,8 +54,8 @@ public class TurtleCommand
             Command command = parseStringCommand( turtle, input.split( " " ) );
             if( command == null )
             {
-                System.err.println( "Invalid command, exiting program." );
-                throw new RuntimeException( "Invalid command has been entered." );
+                System.err.println( "Invalid command " + input + ", exiting program." );
+                return;
             }
             table.setCommand( command );
             table.doCommand();
@@ -97,8 +97,6 @@ public class TurtleCommand
         return command;
     }
 
-    private String getNextCommand()
-    {
-        return System.console().readLine();
-    }
+    public abstract String getNextCommand();
+    
 }

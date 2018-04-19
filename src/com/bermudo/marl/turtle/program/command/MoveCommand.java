@@ -52,4 +52,9 @@ public class MoveCommand implements Command
         }
     }
 
+    @Override
+    public String toString()
+    {
+        return "Move " + turtle.toString();
+    }
 }

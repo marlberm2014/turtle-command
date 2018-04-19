@@ -46,4 +46,10 @@ public class PlaceCommand implements Command
             turtle.setPlace( x, y, direction );
         }
     }
+    
+    @Override
+    public String toString()
+    {
+        return "Place " + argument + " " + turtle.toString();
+    }
 }

@@ -50,4 +50,9 @@ public class RightCommand implements Command
         }
     }
 
+    @Override
+    public String toString()
+    {
+        return "Right " + turtle.toString();
+    }
 }
